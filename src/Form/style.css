@@ -7,31 +7,31 @@
 }
 
 .form__input {
-    max-width: 200px;
     width: 100%;
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
-    margin-left: 10px;
+
     padding: 5px;
     border-color: rgb(245, 173, 65);
 }
 
 .form__label {
+    display: grid;
+    justify-content: center;
     margin: 10px;
 }
 
 .form__labelText {
-    display: inline-block;
-    min-width: 200px;
+    padding: 5px;
+    min-width: 210px;
 }
 
 .form__select {
-    max-width: 200px;
+    width: 100%;
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
-    margin-left: 10px;
     padding: 5px;
     border-color: rgb(245, 173, 65);
 }
@@ -48,7 +48,11 @@
 }
 
 .form__result {
-    max-width: 50%;
+    display: inline-block;    
+}
+
+.form__result--text {
+    display: grid;
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
