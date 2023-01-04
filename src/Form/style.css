@@ -1,0 +1,63 @@
+.form {
+    background-color: rgb(241, 241, 241);
+    color: rgb(5, 5, 5);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form__input {
+    max-width: 200px;
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    border-color: rgb(245, 173, 65);
+}
+
+.form__label {
+    margin: 10px;
+}
+
+.form__labelText {
+    display: inline-block;
+    min-width: 200px;
+}
+
+.form__select {
+    max-width: 200px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    border-color: rgb(245, 173, 65);
+}
+
+.form__button {
+    font-size: 20px;
+    margin: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 4px 40px;
+    background-color: rgb(245, 173, 65);
+    border-color: rgb(245, 173, 65);
+}
+
+.form__result {
+    max-width: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(245, 173, 65);
+    font-size: 20px;
+    padding: 5px 18px;
+}
+
+.form__infoText {
+    font-size: 14px;
+    margin-top: 40px;
+}
