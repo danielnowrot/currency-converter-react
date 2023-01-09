@@ -13,6 +13,7 @@ export const Form = ({ calculateResult, result }) => {
         event.preventDefault();
         calculateResult(currency, amount);
     }
+
     return (
         <form className="form" onSubmit={onSubmit}>
             <p>
