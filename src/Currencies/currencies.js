@@ -14,4 +14,14 @@ export const currencies = [
         description: "Dolar amerykański",
         rate: 4.51,
     },
+    {
+        name: "HUF",
+        description: "Forint węgierski",
+        rate: 0.0119,
+    },
+    {
+        name: "CZK",
+        description: "Korona czeska",
+        rate: 0.1946,
+    },
 ];
