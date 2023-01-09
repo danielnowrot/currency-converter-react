@@ -11,6 +11,7 @@ https://danielnowrot.github.io/currency-converter-react/
 
 This page allows you to convert monetary values between PLN and other currencies.
 ### Updates: Two new currencies added.
+
 ## Technologies:
 - HTML
 - CSS
