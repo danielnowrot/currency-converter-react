@@ -45,6 +45,7 @@
     padding: 4px 40px;
     background-color: rgb(245, 173, 65);
     border-color: rgb(245, 173, 65);
+    cursor: pointer;
 }
 
 .form__result {
