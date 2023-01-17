@@ -5,17 +5,17 @@ import { useState } from "react";
 
 
 export const Form = ({ calculateResult, result }) => {
-
     const [currency, setCurrency] = useState(currencies[0].name);
     const [amount, setAmount] = useState("");
 
-    const onSubmit = (event) => {
+    const onFormSubmit = (event) => {
         event.preventDefault();
+
         calculateResult(currency, amount);
     }
 
     return (
-        <form className="form" onSubmit={onSubmit}>
+        <form className="form" onSubmit={onFormSubmit}>
             <p>
                 <label className="form__label">
                     <span className="form__labelText">Wprowadź wartość*:</span>

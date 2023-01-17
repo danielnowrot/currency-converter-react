@@ -6,7 +6,6 @@ import Container from "./Container";
 import { useState } from "react";
 
 function App() {
-
   const [result, setResult] = useState();
 
   const calculateResult = (currency, amount) => {
