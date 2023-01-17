@@ -1,5 +1,5 @@
 import { Form } from "./Form"
-import { currencies } from "./Currencies/currencies";
+import { currencies } from "./data/currencies";
 import Header from "./Header";
 import Footer from "./Footer";
 import Container from "./Container";
