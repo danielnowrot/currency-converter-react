@@ -3,6 +3,7 @@ import { currencies } from "./data/currencies";
 import Header from "./Header";
 import Footer from "./Footer";
 import Container from "./Container";
+import { Clock } from "./Clock";
 import { useState } from "react";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <Container>
+      <Clock/>
       <Header title="Przelicz sobie pieniążki" />
       <Form result={result} calculateResult={calculateResult} />
       <Footer title="Kursy aktualne na dzień 27.11.2022" />
