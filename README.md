@@ -1,7 +1,7 @@
 # Welcome!
 
 This is a currency converter that was created as part of the YouCode course.
-![](https://github.com/danielnowrot/currencyconverter/blob/ce80f238c7413ae11948d3d6c87d24ce47ed1e15/images/currencyGif.gif)
+![](https://github.com/danielnowrot/currency-converter-react/blob/de3df45f9f3667734cbd97da1ca5ab0adf9637cb/src/currencyGif.gif)
 
 # Demo
 
