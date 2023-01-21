@@ -1,7 +1,7 @@
-import "./style.css";
 import { currencies } from "../data/currencies";
 import { Result } from "../Result";
 import { useState } from "react";
+import { Button, FormComponents, InfoText, Input, Label, LabelText, ResultComponents, Select } from "./styled";
 
 
 export const Form = ({ calculateResult, result }) => {
@@ -15,29 +15,27 @@ export const Form = ({ calculateResult, result }) => {
     }
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
+        <FormComponents onSubmit={onFormSubmit}>
             <p>
-                <label className="form__label">
-                    <span className="form__labelText">Wprowadź wartość*:</span>
-                    <input
+                <Label>
+                    <LabelText>Wprowadź wartość*:</LabelText>
+                    <Input
                         value={amount}
                         onChange={({ target }) => setAmount(target.value)}
-                        className="form__input"
                         name="currencyValue"
                         type="number"
                         min="0.01"
                         step="any"
                         placeholder="PLN"
                         required />
-                </label>
+                </Label>
             </p>
             <p>
-                <label className="form__label">
-                    <span className="form__labelText">Wybierz walutę:</span>
-                    <select
+                <Label>
+                    <LabelText>Wybierz walutę:</LabelText>
+                    <Select
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
-                        className="form__select"
                         name="selectCurrency">
 
                         {currencies.map((currency => (
@@ -48,20 +46,20 @@ export const Form = ({ calculateResult, result }) => {
                                 {currency.description}
                             </option>
                         )))}
-                    </select>
-                </label>
+                    </Select>
+                </Label>
             </p>
             <p>
-                <button className="form__button">POLICZ</button>
+                <Button>POLICZ</Button>
             </p>
-            <p className="form__result">
+            <ResultComponents>
                 <Result result={result} />
-            </p>
-            <p className="form__infoText">
+            </ResultComponents>
+            <InfoText>
                 * - pole wymagane
-            </p>
+            </InfoText>
 
-        </form>
+        </FormComponents>
     )
 
 }

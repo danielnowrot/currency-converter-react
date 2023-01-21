@@ -1,42 +1,43 @@
-.form {
+import styled from "styled-components";
+
+export const FormComponents = styled.form`
     background-color: rgb(241, 241, 241);
     color: rgb(5, 5, 5);
     margin: 20px;
     padding: 20px;
     border-radius: 5px;
-}
+`;
 
-.form__input {
+export const Input = styled.input`
     width: 100%;
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
-
     padding: 5px;
     border-color: rgb(245, 173, 65);
-}
+`;
 
-.form__label {
+export const Label = styled.label`
     display: grid;
     justify-content: center;
     margin: 10px;
-}
+`;
 
-.form__labelText {
+export const LabelText = styled.span`
     padding: 5px;
     min-width: 210px;
-}
+`;
 
-.form__select {
+export const Select = styled.select`
     width: 100%;
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
     padding: 5px;
     border-color: rgb(245, 173, 65);
-}
+`;
 
-.form__button {
+export const Button = styled.button`
     font-size: 20px;
     margin: 10px;
     border-width: 2px;
@@ -46,13 +47,13 @@
     background-color: rgb(245, 173, 65);
     border-color: rgb(245, 173, 65);
     cursor: pointer;
-}
+`;
 
-.form__result {
-    display: inline-block;    
-}
+export const ResultComponents = styled.p`
+    display: inline-block; 
+`;
 
-.form__result--text {
+export const ResultText = styled.span`
     display: grid;
     border-width: 2px;
     border-style: solid;
@@ -60,9 +61,10 @@
     border-color: rgb(245, 173, 65);
     font-size: 20px;
     padding: 5px 18px;
-}
+`;
 
-.form__infoText {
+export const InfoText = styled.p`
     font-size: 14px;
     margin-top: 40px;
-}
+`;
+
