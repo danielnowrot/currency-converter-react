@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FooterComponents = styled.footer`
+export const StyledFooter = styled.footer`
     font-size: 14px;
     font-style: italic;
 `;

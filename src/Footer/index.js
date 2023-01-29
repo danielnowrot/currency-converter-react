@@ -1,9 +1,9 @@
-import { FooterComponents } from "./styled";
+import { StyledFooter } from "./styled";
 
-const Footer = ({ title }) => (
-  <FooterComponents>
-    {title};
-  </FooterComponents>
+const Footer = ({ title, ratesData }) => (
+  <StyledFooter>
+    {title}{ratesData.date}
+  </StyledFooter>
 );
 
 export default Footer;

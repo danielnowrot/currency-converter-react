@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormComponents = styled.form`
+export const Wrapper = styled.form`
     background-color: rgb(241, 241, 241);
     color: rgb(5, 5, 5);
     margin: 20px;
@@ -49,7 +49,7 @@ export const Button = styled.button`
     cursor: pointer;
 `;
 
-export const ResultComponents = styled.p`
+export const StyledResult = styled.p`
     display: inline-block; 
 `;
 

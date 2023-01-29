@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ClockComponents = styled.span`
+export const StyledClock = styled.span`
     display: block;
     font-family: monospace;
     font-size: 14px;
