@@ -10,7 +10,7 @@ https://danielnowrot.github.io/currency-converter-react/
 ## Description
 
 This page allows you to convert monetary values between PLN and other currencies.
-### Updates: Two new currencies added.
+### Updates: Added currencies from API
 
 ## Technologies:
 - HTML
@@ -19,6 +19,11 @@ This page allows you to convert monetary values between PLN and other currencies
 - React
 - BEM
 - ES6 + features
+- @media queries
+- Immutability
+- Styled components
+- Hooks
+- Fetch, Async, Await
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
