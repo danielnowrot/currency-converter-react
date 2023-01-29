@@ -1,31 +1,36 @@
 import { Form } from "./Form"
-import { currencies } from "./data/currencies";
+import { useCurrencies } from "./data/useCurrencies";
 import Header from "./Header";
 import Footer from "./Footer";
 import Container from "./Container";
 import { Clock } from "./Clock";
 import { useState } from "react";
+import GlobalStyle from "./GlobalStyles/globalStyles";
 
 function App() {
   const [result, setResult] = useState();
+  const ratesData = useCurrencies();
 
   const calculateResult = (currency, amount) => {
-    const rate = currencies.find(({ name }) => name === currency).rate;
+    const rate = ratesData.rates[currency];
 
     setResult({
       sourceAmount: +amount,
-      targetAmount: amount / rate,
+      targetAmount: amount * rate,
       currency,
     });
   };
 
   return (
+    <main>
+    <GlobalStyle />
     <Container>
-      <Clock/>
+      <Clock />
       <Header title="Przelicz sobie pieniążki" />
-      <Form result={result} calculateResult={calculateResult} />
-      <Footer title="Kursy aktualne na dzień 27.11.2022" />
+      <Form result={result} calculateResult={calculateResult} ratesData={ratesData} />
+      <Footer title="Kursy aktualne na dzień " ratesData={ratesData} />
     </Container>
+    </main>
   );
 }
 

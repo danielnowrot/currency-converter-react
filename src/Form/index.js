@@ -1,11 +1,9 @@
-import { currencies } from "../data/currencies";
 import { Result } from "../Result";
 import { useState } from "react";
-import { Button, FormComponents, InfoText, Input, Label, LabelText, ResultComponents, Select } from "./styled";
+import { Button, Wrapper, InfoText, Input, Label, LabelText, StyledResult, Select } from "./styled";
 
-
-export const Form = ({ calculateResult, result }) => {
-    const [currency, setCurrency] = useState(currencies[0].name);
+export const Form = ({ calculateResult, result, ratesData }) => {
+    const [currency, setCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
 
     const onFormSubmit = (event) => {
@@ -15,7 +13,7 @@ export const Form = ({ calculateResult, result }) => {
     }
 
     return (
-        <FormComponents onSubmit={onFormSubmit}>
+        <Wrapper onSubmit={onFormSubmit}>
             <p>
                 <Label>
                     <LabelText>Wprowadź wartość*:</LabelText>
@@ -37,13 +35,12 @@ export const Form = ({ calculateResult, result }) => {
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
                         name="selectCurrency">
-
-                        {currencies.map((currency => (
+                        {Object.keys(ratesData.rates).map((rates => (
                             <option
-                                key={currency.name}
-                                value={currency.name}
+                                key={rates}
+                                value={rates}
                             >
-                                {currency.description}
+                                {rates}
                             </option>
                         )))}
                     </Select>
@@ -52,14 +49,14 @@ export const Form = ({ calculateResult, result }) => {
             <p>
                 <Button>POLICZ</Button>
             </p>
-            <ResultComponents>
+            <StyledResult>
                 <Result result={result} />
-            </ResultComponents>
+            </StyledResult>
             <InfoText>
                 * - pole wymagane
             </InfoText>
 
-        </FormComponents>
+        </Wrapper>
     )
 
 }
