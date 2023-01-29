@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export const useCurrencies = () => {
     const [ratesData, setRatesData] = useState({
-        date: {},
+        date: null,
         rates: {},
         status: "loading",
     });
@@ -26,6 +26,6 @@ export const useCurrencies = () => {
         };
         setTimeout(dataApi, 2000);
     },[]);
-console.log(ratesData.rates);
+console.log(ratesData.status);
     return ratesData;
 };
