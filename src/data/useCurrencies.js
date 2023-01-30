@@ -24,8 +24,9 @@ export const useCurrencies = () => {
                 });
             };
         };
+
         setTimeout(dataApi, 2000);
     },[]);
-console.log(ratesData.status);
+    
     return ratesData;
 };
