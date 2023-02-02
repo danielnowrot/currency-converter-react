@@ -6,11 +6,13 @@ export const Form = ({ calculateResult, result, ratesData }) => {
     const [currency, setCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
     const status = ratesData.status;
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
         calculateResult(currency, amount);
-    }
+    };
+    
     if (["loading", "error"].includes(status)) {
         return (
             <p>
@@ -26,7 +28,7 @@ export const Form = ({ calculateResult, result, ratesData }) => {
             </p>
         );
     };
-    
+
     return (
         <Wrapper onSubmit={onFormSubmit}>
             <p>
